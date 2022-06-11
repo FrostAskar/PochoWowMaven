@@ -8,4 +8,5 @@ public interface PersonajeDao {
 
     void leerCaracteristicas (Jugador jugador);
 
+    public void listaPersonajes(Jugador jugador);
 }

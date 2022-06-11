@@ -1,5 +1,6 @@
 package menus;
 
+import Utils.DBUtil;
 import Utils.Sesion;
 import dao.JugadorDao;
 import dao.Mysql.JugadorDaoMysql;
@@ -64,7 +65,7 @@ public class LoginMenu extends Menu{
 
     public static void main(String[] args) {
         LoginMenu login = new LoginMenu("Login");
-
+        //DBUtil.createConnectionFromProperties("");
         login.start();
     }
 }

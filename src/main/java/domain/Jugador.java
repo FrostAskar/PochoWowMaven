@@ -17,4 +17,6 @@ public class Jugador {
         this.nombre = nombre;
         this.contraseña = contraseña;
     }
+
+
 }

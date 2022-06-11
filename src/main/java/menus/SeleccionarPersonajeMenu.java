@@ -1,5 +1,7 @@
 package menus;
 
+import Utils.Sesion;
+
 public class SeleccionarPersonajeMenu extends Menu{
 
     public SeleccionarPersonajeMenu(String title) {
@@ -11,6 +13,7 @@ public class SeleccionarPersonajeMenu extends Menu{
         addOption("1", new MenuAction() {
             @Override
             public void execute() {
+
                 new AntesDeAventuraMenu("Antes de salir").start();
             }
 

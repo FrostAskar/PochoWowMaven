@@ -18,7 +18,7 @@ public class PersonajeDaoMysql implements PersonajeDao {
     @Override
     public boolean crearPersonaje(String clase, String nombre, Jugador jugador) {
         Personaje personaje = null;
-
+        //Recupera los datos de la clase seleccionada por el jugador
         String query = "SELECT * FROM Clase WHERE nombre = ?";
 
         try {
@@ -43,7 +43,7 @@ public class PersonajeDaoMysql implements PersonajeDao {
 //        return personaje;
 
         query = "INSERT INTO Personaje (nombre, clase, nivel, ataque, salud_max, salud_actual, precisión, evasión, oro, experiencia, nombre_jugador)" +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try {
             PreparedStatement personajeCreationStmnt = con.prepareStatement(query);
@@ -70,6 +70,24 @@ public class PersonajeDaoMysql implements PersonajeDao {
         return false;
     }
 
+
+    public void listaPersonajes(Jugador jugador){
+        Personaje pj;
+        String query = "SELECT * FROM Personaje WHERE nombre_jugador=?";
+        try {
+            PreparedStatement listaPersonajes = con.prepareStatement(query);
+            listaPersonajes.setString(1,jugador.getNombre());
+            ResultSet pjs =listaPersonajes.executeQuery();
+
+            while(pjs.next()){
+                System.out.println(pjs.toString());
+
+            }
+        }catch (SQLException e){
+            System.err.println(e);
+        }
+
+    }
     @Override
     public void leerCaracteristicas(Jugador jugador) {
 

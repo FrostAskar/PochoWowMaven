@@ -34,6 +34,13 @@ public class CrearPersonajeMenu extends Menu{
             @Override
             public void execute() {
 
+                String nombre = Input.readString("Introduce un nombre para tu Pícaro: ");
+                if (Sesion.getInstance().getPersonaje().crearPersonaje("Pícaro", nombre, sesion.getJugadorActivo())){
+                    System.out.println("Personaje creado satisfactoriamente");
+                    sleep(2000);
+                } else{
+                    sleep(2000);
+                };
             }
 
             @Override
@@ -46,6 +53,13 @@ public class CrearPersonajeMenu extends Menu{
             @Override
             public void execute() {
 
+                String nombre = Input.readString("Introduce un nombre para tu Sacerdote: ");
+                if (Sesion.getInstance().getPersonaje().crearPersonaje("Sacerdote", nombre, sesion.getJugadorActivo())){
+                    System.out.println("Personaje creado satisfactoriamente");
+                    sleep(2000);
+                } else{
+                    sleep(2000);
+                };
             }
 
             @Override
@@ -58,6 +72,13 @@ public class CrearPersonajeMenu extends Menu{
             @Override
             public void execute() {
 
+                String nombre = Input.readString("Introduce un nombre para tu Brujo: ");
+                if (Sesion.getInstance().getPersonaje().crearPersonaje("Brujo", nombre, sesion.getJugadorActivo())){
+                    System.out.println("Personaje creado satisfactoriamente");
+                    sleep(2000);
+                } else{
+                    sleep(2000);
+                };
             }
 
             @Override
@@ -70,6 +91,13 @@ public class CrearPersonajeMenu extends Menu{
             @Override
             public void execute() {
 
+                String nombre = Input.readString("Introduce un nombre para tu Mago: ");
+                if (Sesion.getInstance().getPersonaje().crearPersonaje("Mago", nombre, sesion.getJugadorActivo())){
+                    System.out.println("Personaje creado satisfactoriamente");
+                    sleep(2000);
+                } else{
+                    sleep(2000);
+                };
             }
 
             @Override
@@ -82,6 +110,13 @@ public class CrearPersonajeMenu extends Menu{
             @Override
             public void execute() {
 
+                String nombre = Input.readString("Introduce un nombre para tu Chamán: ");
+                if (Sesion.getInstance().getPersonaje().crearPersonaje("Chamán", nombre, sesion.getJugadorActivo())){
+                    System.out.println("Personaje creado satisfactoriamente");
+                    sleep(2000);
+                } else{
+                    sleep(2000);
+                };
             }
 
             @Override
@@ -94,6 +129,13 @@ public class CrearPersonajeMenu extends Menu{
             @Override
             public void execute() {
 
+                String nombre = Input.readString("Introduce un nombre para tu Druida: ");
+                if (Sesion.getInstance().getPersonaje().crearPersonaje("Druida", nombre, sesion.getJugadorActivo())){
+                    System.out.println("Personaje creado satisfactoriamente");
+                    sleep(2000);
+                } else{
+                    sleep(2000);
+                };
             }
 
             @Override
@@ -106,6 +148,13 @@ public class CrearPersonajeMenu extends Menu{
             @Override
             public void execute() {
 
+                String nombre = Input.readString("Introduce un nombre para tu Cazador: ");
+                if (Sesion.getInstance().getPersonaje().crearPersonaje("Cazador", nombre, sesion.getJugadorActivo())){
+                    System.out.println("Personaje creado satisfactoriamente");
+                    sleep(2000);
+                } else{
+                    sleep(2000);
+                };
             }
 
             @Override
@@ -118,6 +167,13 @@ public class CrearPersonajeMenu extends Menu{
             @Override
             public void execute() {
 
+                String nombre = Input.readString("Introduce un nombre para tu Guerrero: ");
+                if (Sesion.getInstance().getPersonaje().crearPersonaje("Guerrero", nombre, sesion.getJugadorActivo())){
+                    System.out.println("Personaje creado satisfactoriamente");
+                    sleep(2000);
+                } else{
+                    sleep(2000);
+                };
             }
 
             @Override
@@ -130,11 +186,18 @@ public class CrearPersonajeMenu extends Menu{
             @Override
             public void execute() {
 
+                String nombre = Input.readString("Introduce un nombre para tu Maestro de Juego: ");
+                if (Sesion.getInstance().getPersonaje().crearPersonaje("Maestro de Juego", nombre, sesion.getJugadorActivo())){
+                    System.out.println("Personaje creado satisfactoriamente");
+                    sleep(2000);
+                } else{
+                    sleep(2000);
+                };
             }
 
             @Override
             public String getOptionName() {
-                return "Maestro de juego";
+                return "Maestro de Juego";
             }
         });
 
