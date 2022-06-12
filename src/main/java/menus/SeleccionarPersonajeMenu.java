@@ -13,6 +13,9 @@ public class SeleccionarPersonajeMenu extends Menu{
         addOption("1", new MenuAction() {
             @Override
             public void execute() {
+                Sesion.getInstance().setPersonajeActivo(
+                Sesion.getInstance().getPersonaje().listaPersonajes(Sesion.getInstance().getJugadorActivo())
+                );
 
                 new AntesDeAventuraMenu("Antes de salir").start();
             }

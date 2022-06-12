@@ -4,12 +4,14 @@ import Utils.Sesion;
 import dao.PersonajeDao;
 import domain.Jugador;
 import domain.Personaje;
+import menus.Input;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+import java.util.ArrayList;
+import java.util.ArrayList;
 public class PersonajeDaoMysql implements PersonajeDao {
 
     private Connection con = null;
@@ -71,8 +73,10 @@ public class PersonajeDaoMysql implements PersonajeDao {
     }
 
 
-    public void listaPersonajes(Jugador jugador){
-        Personaje pj;
+    public Personaje listaPersonajes(Jugador jugador){
+        Personaje pj= null;
+        ArrayList <Personaje> listapjs = new ArrayList<>();
+
         String query = "SELECT * FROM Personaje WHERE nombre_jugador=?";
         try {
             PreparedStatement listaPersonajes = con.prepareStatement(query);
@@ -80,13 +84,32 @@ public class PersonajeDaoMysql implements PersonajeDao {
             ResultSet pjs =listaPersonajes.executeQuery();
 
             while(pjs.next()){
-                System.out.println(pjs.toString());
+                listapjs.add(new Personaje (
+                        pjs.getString("nombre"),
+                        pjs.getString("clase"),
+                        pjs.getInt("nivel"),
+                        pjs.getInt("ataque"),
+                        pjs.getInt("salud_actual"),
+                        pjs.getInt("salud_max"),
+                        pjs.getInt("precisión"),
+                        pjs.getInt("evasión"),
+                        pjs.getInt("oro"),
+                        pjs.getInt("experiencia")
+
+                ));
 
             }
+            for (int i=0;i<listapjs.size();i++){
+                System.out.println((i+1)+"."+listapjs.get(i).getNombre());
+            }
+            int opcion= Input.readInt("Elige tu personaje");
+           pj= listapjs.get(opcion-1);
+
+
         }catch (SQLException e){
             System.err.println(e);
         }
-
+        return pj;
     }
     @Override
     public void leerCaracteristicas(Jugador jugador) {

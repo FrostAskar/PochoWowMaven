@@ -24,6 +24,20 @@ public class Personaje {
         this.jugador = jugador;
     }
 
+    public Personaje(String nombre, String clase, int nivel, int ataque, int psActual, int psMax, int precision, int evasion, int oro, int experiencia) {
+        this.nombre = nombre;
+        this.clase = clase;
+        this.nivel = nivel;
+        this.ataque = ataque;
+        this.psActual = psActual;
+        this.psMax = psMax;
+        this.precision = precision;
+        this.evasion = evasion;
+        this.oro = oro;
+        this.experiencia = experiencia;
+        this.jugador = jugador;
+    }
+
     public String getNombre() {
         return nombre;
     }
