@@ -14,6 +14,7 @@ public class Personaje {
     private int experiencia = 0;
     private Jugador jugador;
 
+    //Constructor para personajes nuevos
     public Personaje(String nombre, String clase, int ataque, int psMax, int precision, int evasion, Jugador jugador) {
         this.nombre = nombre;
         this.clase = clase;
@@ -23,7 +24,7 @@ public class Personaje {
         this.evasion = evasion;
         this.jugador = jugador;
     }
-
+    //Constructor para personajes ya creados que se obtienen de la BDD para jugar
     public Personaje(String nombre, String clase, int nivel, int ataque, int psActual, int psMax, int precision, int evasion, int oro, int experiencia) {
         this.nombre = nombre;
         this.clase = clase;
@@ -35,7 +36,6 @@ public class Personaje {
         this.evasion = evasion;
         this.oro = oro;
         this.experiencia = experiencia;
-        this.jugador = jugador;
     }
 
     public String getNombre() {

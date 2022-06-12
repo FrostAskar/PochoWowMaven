@@ -1,9 +1,11 @@
 package menus;
 
+import Utils.Sesion;
+
 public class MazmorraMenu extends Menu{
 
     private String nombreObjetivo;
-
+    Sesion sesion= Sesion.getInstance();
     public MazmorraMenu(String title, String nombreMazmorra) {
         super(title);
         this.nombreObjetivo = nombreMazmorra;
@@ -18,6 +20,7 @@ public class MazmorraMenu extends Menu{
                 sleep(2000);
                 System.out.println("Aquí irán las castañas");
                 sleep(2000);
+                //Generar enemigos
             }
 
             @Override

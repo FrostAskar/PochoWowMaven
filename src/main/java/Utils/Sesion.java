@@ -17,6 +17,8 @@ public class Sesion {
     Jugador jugadorActivo;
     PersonajeDao personaje;
     Personaje personajeActivo;
+    String maz;
+    String mazmorraActiva;
 
     public Jugador getJugadorActivo() {
         return jugadorActivo;
@@ -44,7 +46,19 @@ public class Sesion {
     public Personaje getPersonajeActivo() {
         return personajeActivo;
     }
+    public void setMazmorra (String mazmorra){
+        this.maz=mazmorra;
+    }
+    public String getMazmorra(){
+        return this.maz;
+    }
 
+    public void setMazmorraActiva(String mazActiva){
+        this.mazmorraActiva=mazActiva;
+    }
+    public String getMazmorraActiva(){
+        return this.mazmorraActiva;
+    }
     private Sesion(){
         con = DBUtil.createConnectionFromProperties("res/db.properties");
         jugador = new JugadorDaoMysql(this.con);

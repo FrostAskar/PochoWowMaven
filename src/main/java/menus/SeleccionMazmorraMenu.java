@@ -1,5 +1,7 @@
 package menus;
 
+import Utils.Sesion;
+
 public class SeleccionMazmorraMenu extends Menu{
     public SeleccionMazmorraMenu(String title) {
         super(title);
@@ -8,20 +10,23 @@ public class SeleccionMazmorraMenu extends Menu{
     @Override
     protected void initActions() {
         addOption("1", new MenuAction() {
+
             @Override
             public void execute() {
-                new MazmorraMenu("Mazmorra", "Caverna de Brazanegra").start();
+                Sesion.getInstance().setMazmorraActiva("Cavernas de Brazanegra");
+                new MazmorraMenu("Mazmorra", "Cavernas de Brazanegra").start();
             }
 
             @Override
             public String getOptionName() {
-                return "Caverna de Brazanegra";
+                return "Cavernas de Brazanegra";
             }
         });
 
         addOption("2", new MenuAction() {
             @Override
             public void execute() {
+                Sesion.getInstance().setMazmorraActiva("Templo Oscuro");
                 new MazmorraMenu("Mazmorra", "Templo Oscuro").start();
             }
 
@@ -34,12 +39,13 @@ public class SeleccionMazmorraMenu extends Menu{
         addOption("3", new MenuAction() {
             @Override
             public void execute() {
-                new MazmorraMenu("Mazmorra", "Ciudadela Corona de Hielo").start();
+                Sesion.getInstance().setMazmorraActiva("Ciudadela de Corona de Hielo");
+                new MazmorraMenu("Mazmorra", "Ciudadela de Corona de Hielo").start();
             }
 
             @Override
             public String getOptionName() {
-                return "Ciudadela Corona de Hielo";
+                return "Ciudadela de Corona de Hielo";
             }
         });
     }

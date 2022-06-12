@@ -95,7 +95,6 @@ public class PersonajeDaoMysql implements PersonajeDao {
                         pjs.getInt("evasión"),
                         pjs.getInt("oro"),
                         pjs.getInt("experiencia")
-
                 ));
 
             }
