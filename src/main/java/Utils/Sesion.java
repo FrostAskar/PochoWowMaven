@@ -3,7 +3,9 @@ package Utils;
 import dao.JugadorDao;
 import dao.Mysql.JugadorDaoMysql;
 import dao.Mysql.PersonajeDaoMysql;
+import dao.Mysql.MercadoDaoMysql;
 import dao.PersonajeDao;
+import dao.MercadoDao;
 import domain.Jugador;
 import domain.Personaje;
 
@@ -19,6 +21,8 @@ public class Sesion {
     Personaje personajeActivo;
     String maz;
     String mazmorraActiva;
+
+    MercadoDao mercado;
 
     public Jugador getJugadorActivo() {
         return jugadorActivo;
@@ -38,7 +42,7 @@ public class Sesion {
     public PersonajeDao getPersonaje() {
         return personaje;
     }
-
+    public MercadoDao getMercado() {return mercado;};
     public void setPersonajeActivo(Personaje personaje) {
         this.personajeActivo = personaje;
     }
@@ -59,10 +63,12 @@ public class Sesion {
     public String getMazmorraActiva(){
         return this.mazmorraActiva;
     }
+
     private Sesion(){
         con = DBUtil.createConnectionFromProperties("res/db.properties");
         jugador = new JugadorDaoMysql(this.con);
         personaje = new PersonajeDaoMysql(this.con);
+        mercado = new MercadoDaoMysql (this.con);
     }
 
     private static Sesion instance = null;

@@ -9,4 +9,6 @@ public interface JugadorDao {
     Jugador buscarPorNombre (String nombre);
 
     Jugador verificarJugador(String nombre, String contraseña);
+
+
 }

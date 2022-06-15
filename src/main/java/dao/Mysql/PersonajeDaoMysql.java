@@ -4,12 +4,10 @@ import Utils.Sesion;
 import dao.PersonajeDao;
 import domain.Jugador;
 import domain.Personaje;
+import domain.Objeto;
 import menus.Input;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.ArrayList;
 public class PersonajeDaoMysql implements PersonajeDao {
@@ -113,5 +111,44 @@ public class PersonajeDaoMysql implements PersonajeDao {
     @Override
     public void leerCaracteristicas(Jugador jugador) {
 
+    }
+
+    public void mostrarInventario(){
+        Objeto o;
+        ResultSet listaObjetos;
+
+        String query ="SELECT Id_objeto, ataque, salud, precisión, evasión, nombre FROM Objeto WHERE nombre_personaje=?";
+        try {
+
+
+            PreparedStatement lista = con.prepareStatement(query);
+            lista.setString(1, Sesion.getInstance().getPersonajeActivo().getNombre());
+            listaObjetos= lista.executeQuery();
+
+            while(listaObjetos.next()){
+
+                o= new Objeto(
+                        Sesion.getInstance().getPersonajeActivo(),
+                        listaObjetos.getInt("ataque"),
+                        listaObjetos.getInt("salud"),
+                        listaObjetos.getInt("precisión"),
+                        listaObjetos.getInt("evasión"),
+                        listaObjetos.getString("nombre"),
+                        listaObjetos.getInt("ID_objeto")
+
+                );
+
+                System.out.println(o.getId()+". " + o.toString());
+
+            }
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+    }
+    public Objeto buscarObjeto(int id){
+        Objeto o;
+        ResultSet objeto;
+        String query= "SELECT Id_objeto, ataque, salud, precisión, evasión, nombre FROM Objeto WHERE nombre=?";
+        return null;
     }
 }

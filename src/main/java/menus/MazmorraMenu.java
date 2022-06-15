@@ -21,6 +21,7 @@ public class MazmorraMenu extends Menu{
                 System.out.println("Aquí irán las castañas");
                 sleep(2000);
                 //Generar enemigos
+                //combate
             }
 
             @Override

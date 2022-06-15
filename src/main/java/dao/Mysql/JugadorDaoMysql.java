@@ -1,5 +1,7 @@
 package dao.Mysql;
 
+import Utils.Sesion;
+import dao.JugadorDao;
 import dao.JugadorDao;
 import domain.Jugador;
 
@@ -11,6 +13,7 @@ import java.sql.SQLException;
 public class JugadorDaoMysql implements JugadorDao {
 
     private Connection con = null;
+
 
     public JugadorDaoMysql(Connection con){
         this.con = con;
@@ -73,5 +76,7 @@ public class JugadorDaoMysql implements JugadorDao {
 
         return null;
     }
+
+
 
 }
