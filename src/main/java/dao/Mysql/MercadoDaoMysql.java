@@ -84,6 +84,7 @@ public class MercadoDaoMysql implements MercadoDao {
         String vendedor;
         int objeto;
         int opcion= Input.readInt("Introduce el número del objeto que quieres comprar");
+
         String query= "SELECT nombre_vendedor, ID_objeto FROM Mercado WHERE ID_venta=?";
         try {
             PreparedStatement comprar= con.prepareStatement(query);
@@ -93,14 +94,22 @@ public class MercadoDaoMysql implements MercadoDao {
             rs.next();
             vendedor=rs.getString("nombre_vendedor");
             objeto=rs.getInt("ID_objeto");
+
             query= "SELECT comprarObjeto(?,?,?,?)";
             comprar =con.prepareStatement(query);
             comprar.setInt(1,opcion);
             comprar.setInt(2,objeto);
             comprar.setString(3,Sesion.getInstance().getPersonajeActivo().getNombre());
             comprar.setString(4,vendedor);
+            ResultSet aux= comprar.executeQuery();
+            aux.next();
+            int res= aux.getInt(1);
 
-            comprar.executeQuery();
+            if(res==1){
+                System.out.println("La compra se ha realizado correctamente");
+            }else{
+                System.out.println("No tienes suficiente oro");
+            }
         }catch (SQLException fallo){
             System.err.println(fallo);
         }

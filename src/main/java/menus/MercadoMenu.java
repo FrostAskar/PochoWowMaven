@@ -19,7 +19,7 @@ public class MercadoMenu extends Menu{
 
                     @Override
                     public String getOptionName() {
-                        return "Ver Objetos en venta";
+                        return "Ver Objetos en GnomeBay";
                     }
                 }
 
@@ -51,6 +51,6 @@ public class MercadoMenu extends Menu{
 
     @Override
     protected void onPreOptions() {
-
+        System.out.println("Tienes "+ Sesion.getInstance().getPersonajeActivo().getOro()+" monedas de Oro");
     }
 }
