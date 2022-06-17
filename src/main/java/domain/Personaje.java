@@ -37,7 +37,17 @@ public class Personaje {
         this.oro = oro;
         this.experiencia = experiencia;
     }
-
+    private void subirNivel(){
+        int expNecesaria=(30*nivel)-30+(nivel*nivel);
+        if(this.experiencia>=expNecesaria) {
+            this.nivel++;
+            this.ataque+=2;
+            this.psMax+=2;
+            this.evasion=2;
+            this.precision+=2;
+            experiencia = experiencia - expNecesaria;
+        }
+    }
     public String getNombre() {
         return nombre;
     }
