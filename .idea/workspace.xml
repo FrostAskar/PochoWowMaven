@@ -4,29 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bf2c097-b23e-4cf2-9fa4-f45724f39a3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/mysql-connector-java-8.0.27.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/Combate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/Encrypter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/EnemigoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/Mysql/EnemigoDaoMysql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Sesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/Sesion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Mysql/JugadorDaoMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Mysql/JugadorDaoMysql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Mysql/MercadoDaoMysql.java" beforeDir="false" />
+    <list default="true" id="0bf2c097-b23e-4cf2-9fa4-f45724f39a3a" name="Changes" comment="Combate funciona">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/Mysql/PersonajeDaoMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Mysql/PersonajeDaoMysql.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/PersonajeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/PersonajeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Enemigo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Enemigo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domain/Objeto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Objeto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/menus/AntesDeAventuraMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/menus/AntesDeAventuraMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/menus/CombateMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/menus/CombateMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/menus/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/menus/LoginMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/menus/MazmorraMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/menus/MazmorraMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/menus/MercadoMenu.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,13 +18,21 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Dámaso" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Combate funciona">
+      <created>1655492068345</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655492068345</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -50,10 +40,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="finalMerge" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Combate funciona" />
+    <option name="LAST_COMMIT_MESSAGE" value="Combate funciona" />
   </component>
 </project>
