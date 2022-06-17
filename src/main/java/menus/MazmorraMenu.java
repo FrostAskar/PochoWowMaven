@@ -16,12 +16,8 @@ public class MazmorraMenu extends Menu{
         addOption("1", new MenuAction() {
             @Override
             public void execute() {
-                System.out.println("Toca saltarse los dientes");
+                new CombateMenu("combate").start();
                 sleep(2000);
-                System.out.println("Aquí irán las castañas");
-                sleep(2000);
-                //Generar enemigos
-                //combate
             }
 
             @Override

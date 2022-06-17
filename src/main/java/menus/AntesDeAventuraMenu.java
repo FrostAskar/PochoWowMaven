@@ -1,7 +1,5 @@
 package menus;
 
-import Utils.Sesion;
-
 public class AntesDeAventuraMenu extends Menu{
 
     public AntesDeAventuraMenu(String title) {
@@ -28,7 +26,6 @@ public class AntesDeAventuraMenu extends Menu{
             public void execute() {
                 System.out.println("Visitando el mercado.");
                 sleep(2000);
-                new MercadoMenu("¡Bienvenido al Mercado!").start();
             }
 
             @Override
@@ -41,7 +38,6 @@ public class AntesDeAventuraMenu extends Menu{
             @Override
             public void execute() {
                 System.out.println("Mirando el inventario.");
-                Sesion.getInstance().getPersonaje().mostrarInventario();
                 sleep(2000);
             }
 

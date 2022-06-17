@@ -1,5 +1,6 @@
 package menus;
 
+import Utils.Combate;
 import Utils.Sesion;
 import domain.Enemigo;
 import domain.Personaje;
@@ -9,11 +10,11 @@ public class CombateMenu extends Menu{
     Enemigo enemigo;
     Personaje personaje = Sesion.getInstance().getPersonajeActivo();
 
-    public CombateMenu(String title, Enemigo enemigo) {
+    public CombateMenu(String title) {
         super(title);
-        this.enemigo = enemigo;
     }
 
+    Combate combate = new Combate(personaje, enemigo);
 
     @Override
     protected void initActions() {
@@ -21,8 +22,13 @@ public class CombateMenu extends Menu{
         addOption("1", new MenuAction() {
             @Override
             public void execute() {
-                System.out.println("Soltar Castaña");
-                sleep(2000);
+                combate.personajeAtacaEnemigo();
+                if (combate.getTipoTotem()=="Viento"){
+                    System.out.println("¡El totem de viento te acelera y vuelves a atacar!");
+                    combate.personajeAtacaEnemigo();
+                }
+                combate.enemigoIA();
+                sleep(5000);
             }
 
             @Override
@@ -34,8 +40,9 @@ public class CombateMenu extends Menu{
         addOption("2", new MenuAction() {
             @Override
             public void execute() {
-                System.out.println("Agacha la cabeza y corre");
-                sleep(2000);
+                combate.personajeDefiende();
+                combate.enemigoIA();
+                sleep(5000);
             }
 
             @Override
@@ -47,8 +54,13 @@ public class CombateMenu extends Menu{
         addOption("3", new MenuAction() {
             @Override
             public void execute() {
-                System.out.println("Habilidad de clase");
-                sleep(2000);
+                if(combate.getCooldown() != 0) {
+                    System.out.println("¡¡La habilidad aún está en cooldown!!");
+                    sleep(5000);
+                } else {
+                    combate.personajeUsaHabilidadEspecial();
+                    combate.enemigoIA();
+                }
             }
 
             @Override
@@ -73,6 +85,7 @@ public class CombateMenu extends Menu{
 
     @Override
     protected void onPreOptions() {
-
+        combate.nuevaRonda();
     }
+
 }

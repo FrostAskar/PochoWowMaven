@@ -1,6 +1,6 @@
 package menus;
 
-import Utils.DBUtil;
+import Utils.Encrypter;
 import Utils.Sesion;
 import dao.JugadorDao;
 import dao.Mysql.JugadorDaoMysql;
@@ -10,6 +10,7 @@ public class LoginMenu extends Menu{
 
     Sesion sesion = Sesion.getInstance();
     JugadorDao jugadorDao = sesion.getJugador();
+    Encrypter encrypter = new Encrypter();
 
     public LoginMenu(String title) {
         super(title);
@@ -21,7 +22,7 @@ public class LoginMenu extends Menu{
             @Override
             public void execute() {
                 String user = Input.readString("Introduce tu nombre");
-                String pass = Input.readString("Introduce tu contraseña");
+                String pass = encrypter.SHA256(Input.readString("Introduce tu contraseña"));
                 sesion.setJugadorActivo(jugadorDao.verificarJugador(user, pass));
                 if (sesion.getJugadorActivo() == null) {
                     System.out.println("Login Incorrecto");
@@ -43,7 +44,7 @@ public class LoginMenu extends Menu{
             @Override
             public void execute() {
                 String user = Input.readString("Introduce Nombre de usuario");
-                String pass = Input.readString("Introduce una contraseña");
+                String pass = encrypter.SHA256((Input.readString("Introduce una contraseña")));
                 if (Sesion.getInstance().getJugador().crearJugador(user, pass)){
                     System.out.println("Usuario creado satisfactoriamente");
                     sleep(2000);
@@ -65,7 +66,7 @@ public class LoginMenu extends Menu{
 
     public static void main(String[] args) {
         LoginMenu login = new LoginMenu("Login");
-        //DBUtil.createConnectionFromProperties("");
+
         login.start();
     }
 }

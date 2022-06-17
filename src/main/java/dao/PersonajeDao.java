@@ -2,7 +2,6 @@ package dao;
 
 import domain.Jugador;
 import domain.Personaje;
-import domain.Objeto;
 public interface PersonajeDao {
 
     boolean crearPersonaje (String clase, String nombre, Jugador jugador);
@@ -11,7 +10,5 @@ public interface PersonajeDao {
 
     public Personaje listaPersonajes(Jugador jugador);
 
-    void mostrarInventario ();
-
-    Objeto buscarObjeto(int id);
+    public void actualizarPersonaje(Personaje personaje);
 }
