@@ -2,8 +2,10 @@ package Utils;
 
 import dao.EnemigoDao;
 import dao.JugadorDao;
+import dao.MercadoDao;
 import dao.Mysql.EnemigoDaoMysql;
 import dao.Mysql.JugadorDaoMysql;
+import dao.Mysql.MercadoDaoMysql;
 import dao.Mysql.PersonajeDaoMysql;
 import dao.PersonajeDao;
 import domain.Enemigo;
@@ -24,7 +26,7 @@ public class Sesion {
     Enemigo enemigoActivo;
     String maz;
     String mazmorraActiva;
-
+    MercadoDao mercado;
     public Jugador getJugadorActivo() {
         return jugadorActivo;
     }
@@ -50,6 +52,8 @@ public class Sesion {
     public void setPersonajeActivo(Personaje personaje) {
         this.personajeActivo = personaje;
     }
+
+    public MercadoDao getMercado() {return mercado;};
 
     public EnemigoDao getEnemigo() {
         return enemigo;
@@ -85,6 +89,7 @@ public class Sesion {
         jugador = new JugadorDaoMysql(this.con);
         personaje = new PersonajeDaoMysql(this.con);
         enemigo = new EnemigoDaoMysql(this.con);
+        mercado = new MercadoDaoMysql(this.con);
     }
 
     private static Sesion instance = null;

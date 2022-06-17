@@ -4,16 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bf2c097-b23e-4cf2-9fa4-f45724f39a3a" name="Changes" comment="Combate funciona">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Mysql/PersonajeDaoMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Mysql/PersonajeDaoMysql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/PersonajeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/PersonajeDao.java" afterDir="false" />
+    <list default="true" id="0bf2c097-b23e-4cf2-9fa4-f45724f39a3a" name="Changes" comment="Merge Combate + Mercado">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/Colors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/Mysql/ObjetoDaoMysql.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ObjetoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Combate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/Combate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Sesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/Sesion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domain/Objeto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Objeto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -32,7 +42,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655492068345</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Merge Combate + Mercado">
+      <created>1655492870360</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655492870360</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -60,6 +77,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Combate funciona" />
-    <option name="LAST_COMMIT_MESSAGE" value="Combate funciona" />
+    <MESSAGE value="Merge Combate + Mercado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge Combate + Mercado" />
   </component>
 </project>

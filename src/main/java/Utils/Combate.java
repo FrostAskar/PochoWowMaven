@@ -535,4 +535,16 @@ public class Combate {
         }
         return 0;
     }
+
+    public void mostrarPersonaje(){
+
+    }
+
+    public void mostrarEnemigo(){
+
+    }
+
+    public void mostrarPet (){
+
+    }
 }
